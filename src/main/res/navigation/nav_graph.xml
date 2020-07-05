@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articlesRequestFragment">
+
+    <fragment
+        android:id="@+id/requestHistoryFragment"
+        android:name="com.example.newsme.request.RequestHistoryFragment"
+        android:label="RequestHistoryFragment"
+        tools:layout="@layout/fragment_request_history" />
+    <fragment
+        android:id="@+id/requestPredefinedFragment"
+        android:name="com.example.newsme.request.RequestPredefinedFragment"
+        android:label="fragment_request_predefined"
+        tools:layout="@layout/fragment_request_predefined" />
+    <fragment
+        android:id="@+id/requestCustomFragment"
+        android:name="com.example.newsme.request.RequestCustomFragment"
+        android:label="RequestCustomFragment"
+        tools:layout="@layout/fragment_request_custom"/>
+
+
+
+    <fragment
+        android:id="@+id/articlesRequestFragment"
+        android:name="com.example.newsme.ArticlesRequestFragment"
+        android:label="fragment_articles_request"
+        tools:layout="@layout/fragment_articles_request">
+        <argument
+            android:name="ceFragmentViewPagerDeschide"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_requestHistoryFragment_to_articlesListFragment"
+            app:destination="@id/articlesListFragment" />
+        <action
+            android:id="@+id/action_requestPredefinedFragment_to_articlesListFragment"
+            app:destination="@id/articlesListFragment" />
+        <action
+            android:id="@+id/action_requestCustomFragment_to_articlesListFragment"
+            app:destination="@id/articlesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesListFragment"
+        android:name="com.example.newsme.ArticlesListFragment"
+        android:label="fragment_articles_list"
+        tools:layout="@layout/fragment_articles_list">
+        <argument
+            android:name="customStringSearch"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articlesListFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_articlesListFragment_to_articlesRequestFragment"
+            app:destination="@id/articlesRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.newsme.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article">
+        <argument
+            android:name="articleEntityKey"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articleFragment_to_articlesListFragment"
+            app:destination="@id/articlesListFragment" />
+        <action
+            android:id="@+id/action_articleFragment_to_articlesRequestFragment"
+            app:destination="@id/articlesRequestFragment" />
+    </fragment>
+
+</navigation>

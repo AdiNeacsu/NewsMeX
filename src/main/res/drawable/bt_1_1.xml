@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="3dp"
+        android:color="#80FFFFFF" />
+    <corners android:radius="20dp" />
+    <gradient android:angle="180"
+        android:startColor="#730433"
+        android:centerColor="#F885B7"
+        android:endColor="#730433"/>
+<!--ce era: 730433   F885B7-->
+</shape>

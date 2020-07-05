@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NewsMe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="probleme">Request failed.</string>
+    <string name="bt_ask_response_remote">Ask Response Remote</string>
+    <string name="get_article_entity_list">Get Article Entity List</string>
+    <string name="hintCustomRequest">Type expressions to search in articles for</string>
+    <string name="bt_send_custom_request">Search</string>
+    <string name="button_spre_lista">Button Spre Lista</string>
+    <string name="button_spre_articol">Button Spre Articol</string>
+    <string name="url_to_image">Url to image</string>
+    <string name="button_spre_request">Jump Back to Search</string>
+    <string name="at_least_2_char">Search text needs at least 2 characters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news_api_predefined_categories">News By Category</string>
+
+    <string name="pre_general">General</string>
+    <string name="pre_business">Business</string>
+    <string name="pre_entertainment">Entertainment</string>
+    <string name="pre_health">Health</string>
+    <string name="pre_sports">Sports</string>
+    <string name="pre_science">Science</string>
+    <string name="pre_technology">Technology</string>
+
+    <string name="my_articles">My Articles</string>
+    <string name="my_to_be_read">To Be Read\n\nunder construction</string>
+    <string name="my_golden">Golden\n\nunder construction</string>
+    <string name="my_last_opened">Last Opened</string>
+
+    <string name="my_reactions">My Reactions</string>
+    <string name="bulinuta"><![CDATA[&#8226;]]></string>
+</resources>

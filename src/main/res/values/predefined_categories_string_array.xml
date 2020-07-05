@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="predefined_categories">
+        <item>@string/pre_general</item>
+        <item>@string/pre_business</item>
+        <item>@string/pre_entertainment</item>
+        <item>@string/pre_health</item>
+        <item>@string/pre_sports</item>
+        <item>@string/pre_science</item>
+        <item>@string/pre_technology</item>
+    </string-array>
+</resources>

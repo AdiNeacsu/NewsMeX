@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="requestViewModel"
+            type="com.example.newsme.viewmodel.ArticleRequestViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".request.RequestHistoryFragment">
+
+        <TextView
+            android:id="@+id/tvMyArticlesTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@{@string/my_articles}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!---->
+        <Button
+            android:id="@+id/btCategory1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:enabled="false"
+            android:onClick="@{(view) -> requestViewModel.onClickMy(view)}"
+            android:text="@{@string/my_to_be_read}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMyArticlesTitle"
+            android:background="@drawable/bt_1_1"/>
+        <!--   -->
+        <Button
+            android:id="@+id/btCategory2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/my_golden}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickMy(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory1"
+            android:enabled="false"
+            android:background="@drawable/bt_1_2" />
+
+        <Button
+            android:id="@+id/btCategory3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="0dp"
+            android:text="@{@string/my_last_opened}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickMy(view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory2"
+            android:background="@drawable/bt_1_3" />
+        <!--   -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

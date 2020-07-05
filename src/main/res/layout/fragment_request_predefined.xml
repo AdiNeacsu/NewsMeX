@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="requestViewModel"
+            type="com.example.newsme.viewmodel.ArticleRequestViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".request.RequestPredefinedFragment">
+
+        <TextView
+            android:id="@+id/tvPredefinedTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@{@string/news_api_predefined_categories}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--   -->
+        <Button
+            android:id="@+id/btCategory1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_general}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPredefinedTitle"
+            android:background="@drawable/bt_2_1"/>
+
+        <Button
+            android:id="@+id/btCategory2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_business}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory1"
+            android:background="@drawable/bt_2_2"/>
+
+
+        <Button
+            android:id="@+id/btCategory3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_entertainment}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory2"
+            android:background="@drawable/bt_2_3" />
+
+
+        <Button
+            android:id="@+id/btCategory4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_health}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory3"
+            android:background="@drawable/bt_2_4" />
+
+
+        <Button
+            android:id="@+id/btCategory5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_sports}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory4"
+            android:background="@drawable/bt_2_5" />
+
+
+        <Button
+            android:id="@+id/btCategory6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/pre_science}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toTopOf="@+id/btCategory7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory5"
+            android:background="@drawable/bt_2_6" />
+
+        <Button
+            android:id="@+id/btCategory7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="0dp"
+            android:text="@{@string/pre_technology}"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="@{(view) -> requestViewModel.onClickCategory(view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCategory6"
+            android:background="@drawable/bt_2_7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
